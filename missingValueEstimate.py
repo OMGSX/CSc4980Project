@@ -1,13 +1,23 @@
 from pandas import read_csv
-
-import numpy
+from sklearn.preprocessing import Imputer
+import numpy as np
 
 filepath = "./MissingData1.txt"
 
+imputer = Imputer(missing_values='NaN', strategy='mean', axis=0)
+
 dataset = read_csv(filepath, sep='\t', header=None)
 
-dataset[[1,2,3,4,5]] = dataset[[1,2,3,4,5]].replace(1.000000e+99, numpy.NaN)
+outFilePre = open('PettersMissingValue1Before.txt', 'w')
 
-dataset.fillna(dataset.mean(), inplace=True)
+for item in dataset.values:
+    outFilePre.write("%s \n" % item)
 
-print(dataset.describe())
+result = imputer.fit_transform(dataset.values)
+
+print(result)
+
+outFile = open('PettersMissingValue1.txt', 'w')
+
+for item in result:
+    outFile.write("%s \n" % item)

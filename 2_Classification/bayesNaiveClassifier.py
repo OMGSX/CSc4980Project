@@ -26,15 +26,23 @@ filedata = StringIO(filedata)
 
 imputer = Imputer(missing_values='NaN', strategy='mean', axis=0)
 
-dataset = read_csv(filedata, sep='\t', header=None)
-labelsData = read_csv(trainingLabelsFilename, sep='\t', header=None)
-testData = read_csv(testDataFilename, sep='\t', header=None)
+dataset = read_csv(filedata, header=None)
+# print(dataset.values)
+labelsData = np.loadtxt(trainingLabelsFilename)
+# print(labelsData)
+
+testData = read_csv(testDataFilename,header=None)
+# print(testData.values)
 
 cleanData = imputer.fit_transform(dataset.values)
 
 gnb = GaussianNB()
 
-gnb.fit(cleanData, labelsData.values)
+gnb.fit(cleanData, labelsData)
 
-print(gnb.predict(testData.values))
+# print(gnb.predict(testData.values))
+
+
+
+
 

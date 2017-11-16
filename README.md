@@ -12,6 +12,13 @@ Then run:
 
 `python3 missingValueEstimate.py input.txt output.txt`
 
+or run
+
+`sh estimateSampleOne.sh`
+
+`sh estimateSampleTwo.sh`
+
+`sh estimateSampleThree.sh`
 
 
 TODO:

@@ -3,9 +3,11 @@
 1.
 242 rows x 14 cols
 
-https://machinelearningmastery.com/handle-missing-data-python/
-https://stackoverflow.com/questions/18689235/numpy-array-replace-nan-values-with-average-of-columns/40209161#40209161
-
 TODO:
-    - Once data is properly reading from file, implement algo from above link
-    - Output missing data files 
+    Part1:
+        - get replacing 1.0000000e99 to NaN working in code
+        - Clean up output
+        - Test on data 2
+    Part2:
+        - Try to implement Bayesian classifier
+        - Compare with nearest neighbors, discuss

@@ -6,7 +6,7 @@ from io import StringIO
 
 if len(sys.argv) != 3:
         print("[*] Missing Value Estimator\n"+
-                "[*] Matt Petters, TeamMember2, TeamMember3, TeamMember4 \n" +
+                "[*] Matt Petters, Dylan Monroe, Kristian Sandoval, Prithvi Ravi \n" +
             "[*] Usage: python3 missingValueEstimate.py input.txt output.txt\n"+
                 "[*] Error: Invalid number of arguments")
         sys.exit(0)

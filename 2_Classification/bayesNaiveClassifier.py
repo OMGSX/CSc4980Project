@@ -8,9 +8,9 @@ from io import StringIO
 
 if len(sys.argv) != 5:
         print("[*] Bayes Naive Classifier\n"+
-                "[*] Matt Petters, TeamMember2, TeamMember3, TeamMember4 \n" +
-            "[*] Usage: python3 bayesNaiveClassifier.py trainingData.txt trainingLabels.txt testData.txt outputLabels.txt\n"+
-                "[*] Error: Invalid number of arguments")
+              "[*] Matt Petters, Dylan Monroe, Kristian Sandoval, Prithvi Ravi \n" +
+              "[*] Usage: python3 bayesNaiveClassifier.py trainingData.txt trainingLabels.txt testData.txt outputLabels.txt\n"+
+              "[*] Error: Invalid number of arguments")
         sys.exit(0)
 trainingDataFilename = sys.argv[1]
 trainingLabelsFilename = sys.argv[2]
@@ -40,7 +40,8 @@ gnb = GaussianNB()
 
 gnb.fit(cleanData, labelsData)
 
-# print(gnb.predict(testData.values))
+
+print(gnb.predict(testData.values))
 
 
 

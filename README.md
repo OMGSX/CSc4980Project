@@ -1,13 +1,20 @@
 # Machine Learning Project
  
-1.
-242 rows x 14 cols
+1. Missing Value Estimator
+
+Requires Python 3
+
+To install dependencies using `pip`:
+
+`pip3 install pandas sklearn numpy`
+
+Then run:
+
+`python3 missingValueEstimate.py input.txt output.txt`
+
+
 
 TODO:
-    Part1:
-        - get replacing 1.0000000e99 to NaN working in code
-        - Clean up output
-        - Test on data 2
     Part2:
         - Try to implement Bayesian classifier
         - Compare with nearest neighbors, discuss

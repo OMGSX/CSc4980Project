@@ -27,12 +27,9 @@ filedata = StringIO(filedata)
 imputer = Imputer(missing_values='NaN', strategy='mean', axis=0)
 
 dataset = read_csv(filedata, header=None)
-# print(dataset.values)
 labelsData = np.loadtxt(trainingLabelsFilename)
-# print(labelsData)
 
 testData = read_csv(testDataFilename,header=None)
-# print(testData.values)
 
 cleanData = imputer.fit_transform(dataset.values)
 
